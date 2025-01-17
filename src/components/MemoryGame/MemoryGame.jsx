@@ -7,9 +7,9 @@ import Modal from "../Modal/Modal";
 
 // Henter kort
 const numCards = 17; // Antal kort = sværhedsgrad
-data.sort(() => Math.random() - 0.5); // Random sortering
 const sliced_data = data.slice(0, numCards) // Juster array til antal kort
 const cards = sliced_data.concat(sliced_data) // Dublet af array
+cards.sort(() => Math.random() - 0.5); // Random sortering
 
 export const MemoryGame = () => {
   const [flippedInCards, setFlippedInCards] = useState([]); // State array med forsøg
